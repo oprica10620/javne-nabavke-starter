@@ -7,7 +7,7 @@ import java.util.Collection;
 
 @Data
 @Entity
-@Table(name = "vrstapredmeta")
+@Table
 public class VrstaPredmeta {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -16,8 +16,5 @@ public class VrstaPredmeta {
     
     @Column(name = "naziv")
     private String naziv;
-
-    @OneToMany
-    private Collection<JavnaNabavka> javneNabavke;
 
 }

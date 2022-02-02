@@ -7,7 +7,7 @@ import java.util.Collection;
 
 @Data
 @Entity
-@Table(name = "vrstapostupka")
+@Table
 public class VrstaPostupka {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -16,8 +16,5 @@ public class VrstaPostupka {
     
     @Column(name = "naziv")
     private String naziv;
-
-    @OneToMany
-    private Collection<JavnaNabavka> javneNabavke;
 
 }

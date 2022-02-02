@@ -8,7 +8,7 @@ import java.util.Collection;
 
 @Data
 @Entity
-@Table(name = "javnanabavka")
+@Table
 public class JavnaNabavka {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -68,33 +68,6 @@ public class JavnaNabavka {
 
     @ManyToOne
     private Narucilac narucilac;
-
-    @OneToMany
-    private Collection<KonkursnaDokumentacija> konkursnaDokumentacija;
-
-    @OneToMany
-    private Collection<Obavestenje> obavestenja;
-
-    @OneToMany
-    private Collection<ObavestenjeOIzabranomPonudjacu> obavestenjaOIzabranomPonudjacu;
-
-    @OneToMany
-    private Collection<OkvirniSporazum> okvirniSporazumi;
-
-    @OneToMany
-    private Collection<Partija> partije;
-
-    @OneToMany
-    private Collection<Ponuda> ponude;
-
-    @OneToMany
-    private Collection<StavkaJavneNabavke> stavke;
-
-    @OneToMany
-    private Collection<Ugovor> ugovori;
-
-    @OneToMany
-    private Collection<Zalba> zalbe;
 
     
 }

@@ -8,7 +8,7 @@ import java.util.Collection;
 
 @Data
 @Entity
-@Table(name = "objavaplana")
+@Table
 public class ObjavaPlana {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -20,8 +20,5 @@ public class ObjavaPlana {
     
     @Column(name = "statusObjave")
     private String statusObjave;
-
-    @OneToMany
-    private Collection<PlanJavneNabavke> planoviJavnihNabavki;
 
 }

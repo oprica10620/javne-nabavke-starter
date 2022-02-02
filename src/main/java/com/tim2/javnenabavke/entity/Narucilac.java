@@ -7,7 +7,7 @@ import java.util.Collection;
 
 @Data
 @Entity
-@Table(name = "narucilac")
+@Table
 public class Narucilac {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -44,9 +44,6 @@ public class Narucilac {
     @Column(name = "NSTJOznaka")
     private String nstjOznaka;
 
-    @OneToMany
-    private Collection<JavnaNabavka> javneNabavke;
-
     @ManyToOne
     private Lokacija lokacija;
 
@@ -58,17 +55,5 @@ public class Narucilac {
 
     @ManyToOne
     private Korisnik korisnik;
-
-    @OneToMany
-    private Collection<OkvirniSporazum> okvirniSporazumi;
-
-    @OneToMany
-    private Collection<PlanJavneNabavke> planoviJavnihNabavki;
-
-    @OneToMany
-    private Collection<Preduzece> preduzeca;
-
-    @OneToMany
-    private Collection<Ugovor> ugovori;
 
 }

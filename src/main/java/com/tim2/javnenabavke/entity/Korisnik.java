@@ -7,7 +7,7 @@ import java.util.Collection;
 
 @Data
 @Entity
-@Table(name = "korisnik")
+@Table
 public class Korisnik {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -40,14 +40,5 @@ public class Korisnik {
     
     @Column(name = "tip")
     private String tip;
-
-    @OneToMany
-    private Collection<Narucilac> narucila;
-
-    @OneToMany
-    private Collection<Ponudjac> ponudjaci;
-
-    @OneToMany
-    private Collection<Radnik> radnici;
 
 }
