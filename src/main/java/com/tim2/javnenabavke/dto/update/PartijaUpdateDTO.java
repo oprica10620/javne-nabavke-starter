@@ -1,0 +1,26 @@
+package com.tim2.javnenabavke.dto.update;
+
+
+@lombok.Data
+public class PartijaUpdateDTO {
+    private Long id;
+
+    private String statusPartije;
+
+    private String naziv;
+
+    private String valuta;
+
+    private String kriterijumiZaDodeluUgovoral;
+
+    private String glavnoMestoIzvrsenja;
+
+    private String NSTJIzvrsenja;
+
+    private Integer trajanjeUgovoraUMesecima;
+
+    private String dokumentiKojiSeZahtevaju;
+
+    private Integer javnanabavkaId;
+
+}
